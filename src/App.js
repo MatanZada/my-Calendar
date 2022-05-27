@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import Day from "./components/Day";
+import Months from "./components/Months";
+import calenderData from "./data/calendarData.json";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {calenderData.map((Month) => (
+        <Months {...Month}>
+          {Month.days.map((oneDay) => (
+            <Day {...oneDay} />
+          ))}
+        </Months>
+      ))}
     </div>
   );
+
+  //   {calenderData.map((months) => (
+  //     <Months {...months} />
+  //   ))}
+  //   {calenderData.map((oneDay) => (
+  //     <Day {...oneDay} />
+  //   ))}
+  // </div>
 }
 
 export default App;
