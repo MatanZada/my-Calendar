@@ -1,6 +1,6 @@
 # Home Work at 23.06.22
 
-# my Meeting schedule
+# my meeting schedule
 
 - Please creat a react app that will display a meetings scdual for someone.
   shuld be with this components:
