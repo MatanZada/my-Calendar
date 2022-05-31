@@ -1,4 +1,5 @@
 import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 
 function Day(props) {
   // const { days = [], today } = props;
@@ -14,6 +15,7 @@ function Day(props) {
   return (
     <Card style={styleCards}>
       <Card.Body>
+        <Link to="days">click to visit all the days</Link>
         <Card.Title>{day}</Card.Title>
         <Card.Text>{today}</Card.Text>
       </Card.Body>
